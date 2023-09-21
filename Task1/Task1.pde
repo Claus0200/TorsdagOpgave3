@@ -5,5 +5,5 @@ void setup() {
 }
 
 int getRandom() {
-  return arr[(int)random(0,arr.length)];
+  return arr[(int)random(arr.length)];
 }
