@@ -19,21 +19,22 @@ void setup() {
   println(sum);
   int average = printAverage(integers);
   println(average);
-  
 }
 
 //7.b
 
 void printList(ArrayList<String> listToPrint) {
- println(listToPrint);
- }
- 
- 
+  for (String strings : listToPrint) {
+    println(strings);
+  }
+}
+
+
 //7.c
 
 int printSum(ArrayList<Integer> intToSum) {
   int sum = 0;
-  for(int i : intToSum) {
+  for (int i : intToSum) {
     sum += i;
   }
   return sum;
@@ -42,7 +43,7 @@ int printSum(ArrayList<Integer> intToSum) {
 //7.d
 int printAverage(ArrayList<Integer> intToAverage) {
   int sum = 0;
-  for(int i : intToAverage) {
+  for (int i : intToAverage) {
     sum += i;
   }
   return sum/3;

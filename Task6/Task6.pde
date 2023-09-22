@@ -1,26 +1,20 @@
 int[][] board = new int[8][8];
+int sideLength = 40;
 
 void setup() {
-  size(320,320);
-  for(int i = 0; i < board.length; i++) {
-    for(int n = 0; n < board[i].length; n++) {
-      board[i][n] = (n+i) % 2;
-    }
-  }
-  println(board[1][0]);
-}
-
-void draw() {
-  int sideLength = 40;
-  for(int x = 0; x < board.length; x++) {
-    for(int y = 0; y < board[x].length; y++) {
+  size(320, 320);
+  for (int x = 0; x < board.length; x++) {
+    for (int y = 0; y < board[x].length; y++) {
+      board[x][y] = (x+y) % 2;
       if (board[x][y] == 0) {
+        fill(255);
+      } else if (board[x][y] == 1) {
         fill(0);
       }
-      else if (board[x][y] == 1) {
-        fill(255);
-      }
-      rect(x*sideLength,y*sideLength,sideLength,sideLength);
+      rect(x*sideLength, y*sideLength, sideLength, sideLength);
     }
   }
+  /*for(int[] i : board) {
+    println(i);
+  }*/
 }
